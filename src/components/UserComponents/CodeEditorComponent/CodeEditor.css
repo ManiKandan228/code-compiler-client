@@ -1,0 +1,13 @@
+.code-editor {
+    padding: 20px;
+  }
+  
+  .code-editor textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .code-editor button {
+    padding: 10px;
+  }
+  

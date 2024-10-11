@@ -1,0 +1,20 @@
+.user-management {
+    padding: 20px;
+  }
+  
+  .user-management h2 {
+    margin-bottom: 20px;
+  }
+  
+  .user-management table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-management th,
+  .user-management td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
