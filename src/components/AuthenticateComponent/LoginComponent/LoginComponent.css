@@ -1,18 +1,85 @@
-.login {
-    padding: 20px;
-  }
-  
-  .login form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login input {
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
-  .login button {
-    padding: 10px;
-  }
-  
+/* LoginComponent.css */
+
+body {
+  background-color: #c9d6ff; /* Background color */
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.login-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Full width */
+}
+
+.login-inner-container {
+  background: #fff; /* Background color of the container */
+  width: 450px; /* Fixed width for the container */
+  padding: 2rem; /* Padding around the content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9); /* Box shadow for depth */
+}
+
+.login-form-title {
+  font-size: 1.5rem; /* Font size for title */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Centered text */
+  color: black; /* Text color */
+  margin-bottom: 1rem; /* Spacing below the title */
+}
+
+.login-input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside input */
+  margin: 10px 0; /* Spacing above and below inputs */
+  border: 1px solid #757575; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 15px; /* Font size */
+  color: black; /* Set text color for input fields */
+}
+
+.login-input::placeholder {
+  color: black; 
+  font-weight: bold;
+}
+
+.login-input:focus {
+  outline: none; /* Remove default outline */
+  border: 2px solid hsl(327, 90%, 28%); /* Border color on focus */
+}
+
+.login-button {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside button */
+  background: rgb(125, 125, 235); /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+.login-button:hover {
+  background: #07001f; /* Darken on hover */
+}
+
+/* Additional styles for error message and recover link */
+.login-error-message {
+  color: red; /* Error message color */
+  margin-bottom: 10px; /* Spacing below error message */
+  text-align: center; /* Center the error message */
+}
+
+.login-recover {
+  text-align: right; /* Align the recover link to the right */
+  margin-top: 10px; /* Space above */
+}
+
+.login-links {
+  text-align: center; /* Center the links */
+  margin-top: 1rem; /* Spacing above */
+}

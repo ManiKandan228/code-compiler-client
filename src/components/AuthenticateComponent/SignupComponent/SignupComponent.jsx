@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { app } from '../../../../src/firebase/firebase'
-
+import { useNavigate } from 'react-router-dom';
+import { app } from '../../../../src/firebase/firebase';
+import './SignupComponent.css'
 const auth = getAuth(app);
 
 const SignupComponent = () => {
@@ -12,6 +13,8 @@ const SignupComponent = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  const navigate = useNavigate();
+  
   const registerUser = async (e) => {
     e.preventDefault();
     setError('');
@@ -41,43 +44,64 @@ const SignupComponent = () => {
   };
 
   return (
-    <div className="signup-container">
-      <h2>Sign Up</h2>
+    <div className="container" id="signup">
+      <h1 className="form-title">Register</h1>
       <form onSubmit={registerUser}>
-        <div>
-          <label htmlFor="username">Username:</label>
+        {error && <div className="messageDiv">{error}</div>}
+        {success && <div className="messageDiv">{success}</div>}
+        
+        <div className="input-group">
+          <i className="fas fa-user"></i>
           <input
             type="text"
             id="username"
+            placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
           />
+          <label htmlFor="username">Username</label>
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
+
+        <div className="input-group">
+          <i className="fas fa-envelope"></i>
           <input
             type="email"
             id="email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          <label htmlFor="email">Email</label>
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
+
+        <div className="input-group">
+          <i className="fas fa-lock"></i>
           <input
             type="password"
             id="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          <label htmlFor="password">Password</label>
         </div>
-        <button type="submit">Sign Up</button>
+
+        <button className="btn" id="submitSignUp">Sign Up</button>
       </form>
-      {error && <p className="error">{error}</p>}
-      {success && <p className="success">{success}</p>}
+      <p className="or">----------or--------</p>
+      <div className="icons">
+        <i className="fab fa-google"></i>
+        <i className="fab fa-facebook"></i>
+      </div>
+      <div className="links">
+        <p>Already Have an Account?</p>
+        <button id="signInButton" onClick={() => navigate('/login')}>
+          Sign In
+        </button>
+      </div>
     </div>
   );
 };

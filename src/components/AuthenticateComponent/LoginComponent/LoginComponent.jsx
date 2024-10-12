@@ -3,6 +3,7 @@ import axios from 'axios';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../../../../src/firebase/firebase'; 
 import { useNavigate } from 'react-router-dom';
+import './LoginComponent.css'; // Ensure this path is correct
 
 const LoginComponent = () => {
   const [email, setEmail] = useState('');
@@ -36,25 +37,37 @@ const LoginComponent = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
+      <div className="login-inner-container"> {/* Wrapper for login content */}
+        <h2 className="login-form-title">Login</h2> {/* Updated class name */}
+        {error && <p className="login-error-message">{error}</p>} {/* Updated class name */}
+        <form onSubmit={handleLogin}>
+          <input
+            className="login-input" /* Updated class name */
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            className="login-input" /* Updated class name */
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button className="login-button" type="submit">Login</button> {/* Updated class name */}
+        </form>
+        <div className="login-recover">
+          <a href="/recover-password">Forgot Password?</a>
+        </div>
+        <div className="login-links">
+          <button id="signUpButton" onClick={() => navigate('/signup')}>
+            Sign Up
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

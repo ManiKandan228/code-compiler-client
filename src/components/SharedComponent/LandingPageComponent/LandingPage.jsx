@@ -7,7 +7,7 @@ const LandingPage = () => {
     <div className="landing">
       <h1>Welcome to Online Code Compiler</h1>
       <div>
-        <Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link>
+        <Link to="/signup">Get Started</Link>
       </div>
     </div>
   );
