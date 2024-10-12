@@ -3,7 +3,8 @@ import axios from 'axios';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { app } from '../../../../src/firebase/firebase';
-import './SignupComponent.css'
+import './SignupComponent.css';
+
 const auth = getAuth(app);
 
 const SignupComponent = () => {
@@ -44,63 +45,68 @@ const SignupComponent = () => {
   };
 
   return (
-    <div className="container" id="signup">
-      <h1 className="form-title">Register</h1>
-      <form onSubmit={registerUser}>
-        {error && <div className="messageDiv">{error}</div>}
-        {success && <div className="messageDiv">{success}</div>}
-        
-        <div className="input-group">
-          <i className="fas fa-user"></i>
-          <input
-            type="text"
-            id="username"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-          <label htmlFor="username">Username</label>
-        </div>
+    <div className="signup-body">
+      <div className="signup-container">
+        <h1 className="signup-title">Register</h1>
+        <form className="signup-form" onSubmit={registerUser}>
+          {error && <div className="signup-message">{error}</div>}
+          {success && <div className="signup-message">{success}</div>}
+          
+          <div className="signup-input-group">
+            <i className="fas fa-user"></i>
+            <input
+              type="text"
+              className="signup-input"
+              id="username"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <label htmlFor="username" className="signup-label">Username</label>
+          </div>
 
-        <div className="input-group">
-          <i className="fas fa-envelope"></i>
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <label htmlFor="email">Email</label>
-        </div>
+          <div className="signup-input-group">
+            <i className="fas fa-envelope"></i>
+            <input
+              type="email"
+              className="signup-input"
+              id="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label htmlFor="email" className="signup-label">Email</label>
+          </div>
 
-        <div className="input-group">
-          <i className="fas fa-lock"></i>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <label htmlFor="password">Password</label>
-        </div>
+          <div className="signup-input-group">
+            <i className="fas fa-lock"></i>
+            <input
+              type="password"
+              className="signup-input"
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <label htmlFor="password" className="signup-label">Password</label>
+          </div>
 
-        <button className="btn" id="submitSignUp">Sign Up</button>
-      </form>
-      <p className="or">----------or--------</p>
-      <div className="icons">
-        <i className="fab fa-google"></i>
-        <i className="fab fa-facebook"></i>
-      </div>
-      <div className="links">
-        <p>Already Have an Account?</p>
-        <button id="signInButton" onClick={() => navigate('/login')}>
-          Sign In
-        </button>
+          <button className="signup-btn" id="submitSignUp">Sign Up</button>
+        </form>
+        <p className="signup-or">----------or--------</p>
+        <div className="signup-icons">
+          <i className="fab fa-google"></i>
+          <i className="fab fa-facebook"></i>
+        </div>
+        <div className="signup-links">
+          <p>Already Have an Account?</p>
+          <button id="signInButton" onClick={() => navigate('/login')}>
+            Sign In
+          </button>
+        </div>
       </div>
     </div>
   );

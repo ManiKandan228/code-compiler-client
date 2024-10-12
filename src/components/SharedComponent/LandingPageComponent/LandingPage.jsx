@@ -1,16 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './LandingPage.css';
+import Navbar from "./Navbar";
+import HeroSection from "./HeroSection";
+import FeatureSection from "./FeatureSection";
+import Workflow from "./Workflow";
+import Footer from "./Footer";
+import Testimonials from "./Testimonials";
 
 const LandingPage = () => {
-  return (
-    <div className="landing">
-      <h1>Welcome to Online Code Compiler</h1>
-      <div>
-        <Link to="/signup">Get Started</Link>
-      </div>
-    </div>
-  );
-};
+    return (
+        <> 
+          <Navbar />
+          <div className="max-w-7xl mx-auto pt-20 px-6">
+            <HeroSection />
+            <FeatureSection />
+            <Workflow />
+            <Testimonials />
+            <Footer />
+          </div>
+        </>
+      );
+}
 
-export default LandingPage;
+export default LandingPage

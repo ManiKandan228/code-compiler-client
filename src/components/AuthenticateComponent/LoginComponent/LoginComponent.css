@@ -1,85 +1,105 @@
-/* LoginComponent.css */
-
-body {
-  background-color: #c9d6ff; /* Background color */
+.login-body {
+  background-color: #c9d6ff;
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-  display: flex; /* Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding: 0;
 }
 
 .login-container {
-  display: flex; /* Flexbox for layout */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%; /* Full width */
 }
 
 .login-inner-container {
-  background: #fff; /* Background color of the container */
-  width: 450px; /* Fixed width for the container */
-  padding: 2rem; /* Padding around the content */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9); /* Box shadow for depth */
+  background: #fff;
+  width: 450px; /* Fixed width */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
 }
 
 .login-form-title {
-  font-size: 1.5rem; /* Font size for title */
-  font-weight: bold; /* Bold text */
-  text-align: center; /* Centered text */
-  color: black; /* Text color */
-  margin-bottom: 1rem; /* Spacing below the title */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-bottom: 1rem;
 }
 
 .login-input {
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding inside input */
-  margin: 10px 0; /* Spacing above and below inputs */
-  border: 1px solid #757575; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 15px; /* Font size */
-  color: black; /* Set text color for input fields */
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #757575;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  font-size: 15px;
+  color: black;
 }
 
 .login-input::placeholder {
-  color: black; 
+  color: black;
   font-weight: bold;
 }
 
 .login-input:focus {
-  outline: none; /* Remove default outline */
-  border: 2px solid hsl(327, 90%, 28%); /* Border color on focus */
+  outline: none;
+  border: 2px solid hsl(327, 90%, 28%);
 }
 
 .login-button {
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding inside button */
-  background: rgb(125, 125, 235); /* Button background color */
-  color: white; /* Button text color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  transition: background 0.3s; /* Smooth transition */
+  width: 100%;
+  padding: 10px;
+  background: rgb(125, 125, 235);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .login-button:hover {
-  background: #07001f; /* Darken on hover */
+  background: #07001f;
 }
 
-/* Additional styles for error message and recover link */
 .login-error-message {
-  color: red; /* Error message color */
-  margin-bottom: 10px; /* Spacing below error message */
-  text-align: center; /* Center the error message */
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .login-recover {
-  text-align: right; /* Align the recover link to the right */
-  margin-top: 10px; /* Space above */
+  text-align: right;
+  margin-top: 10px;
+  color: black;
 }
 
 .login-links {
-  text-align: center; /* Center the links */
-  margin-top: 1rem; /* Spacing above */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#signUpButton {
+  background: none;
+  border: none;
+  color: rgb(125, 125, 235);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#signUpButton:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+@media (max-width: 480px) {
+  .login-inner-container {
+    width: 90%; /* Responsive width */
+  }
 }
