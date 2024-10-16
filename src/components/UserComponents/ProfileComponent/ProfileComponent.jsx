@@ -1,7 +1,7 @@
-// src/components/ProfileComponent.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
+import './ProfileComponent.css'; 
 
 const ProfileComponent = () => {
   const [user, setUser] = useState(null);
@@ -36,9 +36,8 @@ const ProfileComponent = () => {
       <h2>User Profile</h2>
       {error && <p className="error-message">{error}</p>}
       {user ? (
-        <div>
-          <p><strong>ID:</strong> {user._id}</p>
-          <p><strong>Username:</strong> {user.username}</p>
+        <div className="profile-info">
+          <p className="username">{user.username}</p>
           <button onClick={navigateToCodeEditor}>Start Coding</button> 
         </div>
       ) : (

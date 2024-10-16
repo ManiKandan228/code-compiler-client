@@ -146,14 +146,21 @@
 }
 
 .signup-message {
-  background-color: hsl(327, 90%, 28%);
-  color: white;
   padding: 10px 20px;
   margin: 10px;
   border-radius: 5px;
   font-size: 1rem;
-  opacity: 0;
   animation: fadeOut 7s forwards;
+}
+
+.signup-message.error {
+  background-color: #ffcccc; /* Light red background */
+  color: #d8000c; /* Dark red text */
+}
+
+.signup-message.success {
+  background-color: hsl(327, 90%, 28%);
+  color: white;
 }
 
 @media (max-width: 480px) {

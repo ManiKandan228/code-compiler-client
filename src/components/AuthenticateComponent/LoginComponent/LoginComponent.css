@@ -1,10 +1,12 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
 .login-body {
   background-color: #c9d6ff;
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   margin: 0;
   padding: 0;
 }
@@ -68,10 +70,17 @@
   background: #07001f;
 }
 
-.login-error-message {
-  color: red;
-  margin-bottom: 10px;
+.login-message {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 1rem;
   text-align: center;
+}
+
+.login-message.error {
+  background-color: #ffcccc; 
+  color: #d8000c; 
 }
 
 .login-recover {

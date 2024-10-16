@@ -1,0 +1,38 @@
+.code-editor {
+  padding: 20px;
+}
+
+.code-editor textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgba(80, 82, 83, 0.329);
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+.code-editor select {
+  padding: 10px;
+  border: 1px solid #f7f8fa;
+  border-radius: 4px;
+  background-color: rgba(31, 28, 28, 0.8);
+  margin-bottom: 10px;
+}
+
+.code-editor button {
+  padding: 10px;
+  border: 1px solid #28a745;
+  background-color: #28a745; 
+  color: white;
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.code-editor button:disabled {
+  background-color: #837e7e;
+  border: 1px solid #aaa; 
+  cursor: not-allowed;
+}
+
+.code-editor button:hover:not(:disabled) {
+  background-color: #218838;
+}

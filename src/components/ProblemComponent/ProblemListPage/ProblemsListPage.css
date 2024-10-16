@@ -1,0 +1,11 @@
+/* ProblemsListPage.css */
+#problemsListPage {
+    background-color: #1d1d1d;
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    margin-top: 60px; /* Add margin to prevent content overlap with navbar */
+}

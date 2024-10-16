@@ -13,9 +13,8 @@ const SignupComponent = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-
   const navigate = useNavigate();
-  
+
   const registerUser = async (e) => {
     e.preventDefault();
     setError('');
@@ -25,21 +24,30 @@ const SignupComponent = () => {
       // Firebase authentication
       await createUserWithEmailAndPassword(auth, email, password);
 
-      // Send to the backend for registration
+      // Send to backend for registration
       const response = await axios.post('http://localhost:5173/api/users/register', {
         username,
         email,
         password,
       });
 
-      setSuccess('User registered successfully!');
+      setSuccess('Registered successfully! Redirecting to login...');
       console.log('User registered:', response.data);
+
+      // Navigate to /login after a short delay
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } catch (err) {
       console.error('Error registering user:', err);
-      if (err.response) {
-        setError(err.response.data.message);
+      if (err.response && err.response.data.message) {
+        setError(err.response.data.message); 
+      } else if (err.code === 'auth/email-already-in-use') {
+        setError('Email is already registered.');
+      } else if (err.code === 'auth/weak-password') {
+        setError('Password should be at least 6 characters.');
       } else {
-        setError('An error occurred during registration.');
+        setError('An error occurred. Please try again.');
       }
     }
   };
@@ -49,9 +57,9 @@ const SignupComponent = () => {
       <div className="signup-container">
         <h1 className="signup-title">Register</h1>
         <form className="signup-form" onSubmit={registerUser}>
-          {error && <div className="signup-message">{error}</div>}
-          {success && <div className="signup-message">{success}</div>}
-          
+          {error && <div className="signup-message error">{error}</div>}
+          {success && <div className="signup-message success">{success}</div>}
+
           <div className="signup-input-group">
             <i className="fas fa-user"></i>
             <input
@@ -96,11 +104,13 @@ const SignupComponent = () => {
 
           <button className="signup-btn" id="submitSignUp">Sign Up</button>
         </form>
+
         <p className="signup-or">----------or--------</p>
         <div className="signup-icons">
           <i className="fab fa-google"></i>
           <i className="fab fa-facebook"></i>
         </div>
+
         <div className="signup-links">
           <p>Already Have an Account?</p>
           <button id="signInButton" onClick={() => navigate('/login')}>

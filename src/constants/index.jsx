@@ -13,9 +13,9 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Testimonials", href: "#" },
+  { label: "Explore", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Problems", href: "/problems" },
 ];
 
 export const testimonials = [
@@ -23,134 +23,102 @@ export const testimonials = [
     user: "John Doe",
     company: "Stellar Solutions",
     image: user1,
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+    text: "The challenges are thoughtfully designed, and the real-time feedback helped me improve fast. A must for anyone preparing for tech interviews.",
   },
   {
     user: "Jane Smith",
     company: "Blue Horizon Technologies",
     image: user2,
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+    text: "The seamless interface and AI assistance took my problem-solving to the next level. Highly recommended for developers of all levels.",
   },
   {
     user: "David Johnson",
     company: "Quantum Innovations",
     image: user3,
-    text: "Working with this company was a pleasure. Their attention to detay recommend them to anyone looking for top-notch service.",
+    text: "The real-time code editor is a game changer. It allows my team to work together and share solutions quickly. Great platform for hackathons too!.",
   },
   {
     user: "Ronee Brown",
     company: "Fusion Dynamics",
     image: user4,
-    text: "Working with the team at XYZ Compa solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    text: "The structured challenges and multi-language support made my prep smooth. I felt confident walking into interviews.",
   },
   {
     user: "Michael Wilson",
     company: "Visionary Creations",
     image: user5,
-    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
+    text: "They saved me so much time and effort when getting started. This platform is now a part of my daily routine and always suggestable.",
   },
   {
     user: "Emily Davis",
     company: "Synergy Systems",
     image: user6,
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+    text: "From code execution to submission tracking, everything works like a charm. Looking forward to seeing new features soon!",
   },
 ];
 
 export const features = [
   {
     icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    text: "Intuitive Code Editor",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+    "Write, debug, and optimize code effortlessly with our smooth and user-friendly editor.",
   },
   {
     icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    text: "Multi-Language Support",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Solve coding problems in your preferred language—whether it's Python, Java, C++, or JavaScript.",
   },
   {
     icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    text: "Starter Templates",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Kick off your projects with predefined code templates to solve common challenges and patterns.",
   },
   {
     icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    text: "Real-Time Code Execution",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Run your code instantly and see results or errors in real-time for fast debugging and learning.",
   },
   {
     icon: <PlugZap />,
-    text: "Collaboration Tools",
+    text: "Team Collaboration",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Collaborate with others on coding problems in real-time, share solutions, and learn together.",
   },
   {
     icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    text: "Performance Insights",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Track your progress and submission history with detailed insights into performance and efficiency.",
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
+    title: "Seamless Code Merging",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Easily manage and merge code changes, ensuring smooth collaboration across projects.",
   },
   {
-    title: "Review code without worry",
+    title: "Effortless Code Reviews",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Review and provide feedback without hassle, maintaining code quality with minimal effort.",
   },
   {
-    title: "AI Assistance to reduce time",
+    title: "AI-Powered Assistance",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Get real-time AI suggestions to optimize your code and reduce development time.",
   },
   {
-    title: "Share work in minutes",
+    title: "Instant Sharing",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Share your work and solutions in minutes with built-in sharing options for faster collaboration",
   },
 ];
 
-export const pricingOptions = [
-  {
-    title: "Free",
-    price: "$0",
-    features: [
-      "Private board sharing",
-      "5 Gb Storage",
-      "Web Analytics",
-      "Private Mode",
-    ],
-  },
-  {
-    title: "Pro",
-    price: "$10",
-    features: [
-      "Private board sharing",
-      "10 Gb Storage",
-      "Web Analytics (Advance)",
-      "Private Mode",
-    ],
-  },
-  {
-    title: "Enterprise",
-    price: "$200",
-    features: [
-      "Private board sharing",
-      "Unlimited Storage",
-      "High Performance Network",
-      "Private Mode",
-    ],
-  },
-];
 
 export const resourcesLinks = [
   { href: "#", text: "Getting Started" },
