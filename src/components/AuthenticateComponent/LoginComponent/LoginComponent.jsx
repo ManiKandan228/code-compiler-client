@@ -21,7 +21,7 @@ const LoginComponent = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      const response = await axios.post('/api/users/login', { email, password });
+      const response = await axios.post('https://compilex-client.vercel.app/api/users/login', { email, password });
       console.log('User logged in:', response.data);
       
       localStorage.setItem('token', response.data.token);

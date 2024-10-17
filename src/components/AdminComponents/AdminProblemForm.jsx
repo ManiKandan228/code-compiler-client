@@ -19,7 +19,7 @@ const AdminProblemForm = () => {
     e.preventDefault();
     try {
         const examplesArray = JSON.parse(problem.examples); // Parse JSON for examples
-        await axios.post('/api/admin/problems', {
+        await axios.post('https://compilex-client.vercel.app/api/admin/problems', {
             title: problem.title,
             description: problem.description,
             difficulty: problem.difficulty,

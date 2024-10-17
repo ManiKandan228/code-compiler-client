@@ -5,7 +5,7 @@ const UserSubmissions = () => {
   const [submissions, setSubmissions] = useState([]);
 
   const fetchSubmissions = async () => {
-    const response = await axios.get('/api/submissions', {
+    const response = await axios.get('https://compilex-client.vercel.app/api/submissions', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     setSubmissions(response.data);

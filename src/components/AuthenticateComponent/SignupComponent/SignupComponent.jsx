@@ -25,7 +25,7 @@ const SignupComponent = () => {
       await createUserWithEmailAndPassword(auth, email, password);
 
       // Send to backend for registration
-      const response = await axios.post('http://localhost:5173/api/users/register', {
+      const response = await axios.post('https://compilex-client.vercel.app/api/users/register', {
         username,
         email,
         password,

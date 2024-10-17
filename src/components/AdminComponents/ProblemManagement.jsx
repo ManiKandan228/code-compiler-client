@@ -5,14 +5,14 @@ const ProblemManagement = () => {
   const [problems, setProblems] = useState([]);
 
   const fetchProblems = async () => {
-    const response = await axios.get('/admin/problems', {
+    const response = await axios.get('https://compilex-client.vercel.app/admin/problems', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     setProblems(response.data);
   };
 
   const deleteProblem = async (id) => {
-    await axios.delete(`/admin/problems/${id}`, {
+    await axios.delete(`https://compilex-client.vercel.app/admin/problems/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     fetchProblems();

@@ -9,7 +9,7 @@ const EditProfileComponent = () => {
   const updateUserProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put('http://localhost:5000/api/users/profile', 
+      const response = await axios.put('https://compilex-client.vercel.app/api/users/profile', 
       { username, password }, {
         headers: {
           Authorization: `Bearer ${token}`,
